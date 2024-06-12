@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    transition: transform 0.3s;
+}
+
+.card h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s; /* Transição rápida para o movimento */
+}
+
+.btn-yes {
+    background: #28a745;
+    color: white;
+}
+
+.btn-yes:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+.btn-no {
+    background: #dc3545;
+    color: white;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.1s; /* Transição rápida para o movimento */
+}
+
+/* Estilo para garantir que o botão "Não" não possa ser clicado */
+.btn-no:disabled {
+    cursor: not-allowed;
+}
+
+/* Estilização para o movimento do botão "Não" */
+.btn-no.moving {
+    position: absolute;
+    transform: translate(0, 0);
+}
